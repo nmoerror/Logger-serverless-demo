@@ -1,0 +1,18 @@
+{
+  "logs": [
+    {
+      "message": "dsds",
+      "attention": true,
+      "tech": "dsakjnadsmd  nked,msdnm",
+      "date": "2019-07-14T05:50:45.098Z",
+      "id": 1
+    }
+  ],
+  "techs": [
+    {
+      "firstName": "Alejandro",
+      "lastName": "Gonzalez",
+      "id": 4
+    }
+  ]
+}
