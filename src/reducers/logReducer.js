@@ -6,12 +6,26 @@ import {
   SET_CURRENT,
   UPDATE_LOG,
   SET_LOADING,
-  LOGS_ERROR,
-  SEARCH_LOGS
-} from "../actions/types";
+  LOGS_ERROR
+} from '../actions/types';
 
 const initialState = {
-  logs: null,
+  logs: [
+    {
+      message: 'Input a Log Here!',
+      attention: false,
+      tech: 'Alejandro Gonzalez',
+      date: '2019-07-27T05:20:11.463Z',
+      id: 1312312
+    },
+    {
+      message: 'We need Technicians !',
+      attention: true,
+      tech: 'Alejandro Gonzalez',
+      date: '2019-07-27T05:21:43.072Z',
+      id: 2312312312
+    }
+  ],
   current: null,
   loading: false,
   error: null
@@ -22,7 +36,7 @@ export default (state = initialState, action) => {
     case GET_LOGS:
       return {
         ...state,
-        logs: action.payload,
+        logs: [...state.logs],
         loading: false
       };
     case ADD_LOG:
@@ -44,26 +58,25 @@ export default (state = initialState, action) => {
           log.id === action.payload.id ? action.payload : log
         )
       };
-    case SEARCH_LOGS:
-      return {
-        ...state,
-        logs: action.payload
-      };
+
     case SET_CURRENT:
       return {
         ...state,
-        current: action.payload
+        current: action.payload,
+        loading: false
       };
     case CLEAR_CURRENT:
       return {
         ...state,
-        current: null
+        current: null,
+        loading: false
       };
     case LOGS_ERROR:
       console.log(action.payload);
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
+        loading: false
       };
     case SET_LOADING:
       return {

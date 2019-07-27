@@ -4,10 +4,16 @@ import {
   DELETE_TECH,
   SET_LOADING,
   TECHS_ERROR
-} from "../actions/types";
+} from '../actions/types';
 
 const initialState = {
-  techs: null,
+  techs: [
+    {
+      firstName: 'Alejandro',
+      lastName: 'Gonzalez',
+      id: 1
+    }
+  ],
   loading: false,
   error: null
 };
@@ -17,7 +23,7 @@ export default (state = initialState, action) => {
     case GET_TECHS:
       return {
         ...state,
-        techs: action.payload,
+        techs: [...state.techs],
         loading: false
       };
     case ADD_TECH:
