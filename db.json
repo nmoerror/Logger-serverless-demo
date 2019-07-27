@@ -1,20 +1,5 @@
 {
-  "logs": [
-    {
-      "message": "dsds",
-      "attention": true,
-      "tech": "dsakjnadsmd  nked,msdnm",
-      "date": "2019-07-14T05:50:45.098Z",
-      "id": 1
-    },
-    {
-      "message": "acaasddassad",
-      "attention": false,
-      "tech": "Alejandro Gonzalez",
-      "date": "2019-07-24T14:23:52.040Z",
-      "id": 2
-    }
-  ],
+  "logs": [],
   "techs": [
     {
       "firstName": "Alejandro",
